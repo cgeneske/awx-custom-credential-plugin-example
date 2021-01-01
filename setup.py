@@ -2,27 +2,27 @@
 
 from setuptools import setup
 
-requirements = []  # add Python dependencies here
+requirements = ["Django", "requests"]  # add Python dependencies here
 # e.g., requirements = ["PyYAML"]
 
 setup(
-    name='awx-custom-credential-plugin-example',
+    name='cyberark-aim-ccp-lookup-username',
     version='0.1',
-    author='Ansible, Inc.',
-    author_email='info@ansible.com',
-    description='',
+    author='Craig Geneske, CyberArk',
+    author_email='craig.geneske@cyberark.com',
+    description='Retrieves username (instead of password) from a CyberArk vaulted object',
     long_description='',
     license='Apache License 2.0',
     keywords='ansible',
-    url='http://github.com/ansible/awx-custom-credential-plugin-example',
-    packages=['awx_custom_credential_plugin_example'],
+    url='http://github.com/cgeneske/cyberark-aim-ccp-lookup-username',
+    packages=['cyberark-aim-ccp-lookup-username'],
     include_package_data=True,
     zip_safe=False,
     setup_requires=[],
     install_requires=requirements,
     entry_points = {
         'awx.credential_plugins': [
-            'example_plugin = awx_custom_credential_plugin_example:example_plugin',
+            'aim_plugin = cyberark-aim-ccp-lookup-username:aim_plugin',
         ]
     }
 )

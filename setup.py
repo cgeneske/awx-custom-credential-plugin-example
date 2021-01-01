@@ -22,7 +22,7 @@ setup(
     install_requires=requirements,
     entry_points = {
         'awx.credential_plugins': [
-            'aim_plugin = cyberark-aim-ccp-lookup-awsaccesskeyid:aim_plugin',
+            'aim_plugin = cyberark-aim-ccp-lookup-awsaccesskeyid:aim_plugin'
         ]
     }
 )

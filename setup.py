@@ -15,14 +15,14 @@ setup(
     license='Apache License 2.0',
     keywords='ansible',
     url='http://github.com/cgeneske/cyberark-aim-ccp-lookup-awsaccesskeyid',
-    packages=['cyberark-aim-ccp-lookup-awsaccesskeyid'],
+    packages=['cyberark_aim_ccp_lookup_awsaccesskeyid'],
     include_package_data=True,
     zip_safe=False,
     setup_requires=[],
     install_requires=requirements,
     entry_points = {
         'awx.credential_plugins': [
-            'aim_plugin = cyberark-aim-ccp-lookup-awsaccesskeyid:aim_plugin'
+            'aim_plugin = cyberark_aim_ccp_lookup_awsaccesskeyid:aim_plugin',
         ]
     }
 )
